@@ -1,0 +1,3 @@
+• Project 1: Infrastructure and automation — full Terraform environment with VNet, NSGs, VM, storage, and remote state
+• Project 2: Monitoring and alerting — Azure Monitor, Log Analytics, KQL queries, alert rules, and Logic App notifications
+• Project 3: CI/CD pipeline — GitHub Actions or Azure DevOps with validation, approval gates, and branch protection
