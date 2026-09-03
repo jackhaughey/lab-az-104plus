@@ -1,0 +1,26 @@
+Project 2: Monitoring & alerting (Azure Monitor, Log Analytics, KQL, Logic Apps)
+Overview
+
+    Goal: Observe the VM from Project 1, collect logs/metrics, and send alerts via Logic App (email/Teams).
+
+    Scope: Log Analytics workspace, diagnostic settings, DCR/DCE (AMA), KQL queries, alert rules, Logic App.
+
+Architecture
+
+    Log Analytics workspace: law-core-dev
+
+    Data collection:
+
+        VM sends metrics + syslog to workspace
+
+        Diagnostic settings on VM and storage account
+
+    Alerts:
+
+        CPU > 80% for 10 minutes
+
+        Failed SSH logins spike
+
+    Notification path:
+
+        Alert → Action group → Logic App → email/Teams

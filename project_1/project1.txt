@@ -1,0 +1,40 @@
+Project 1: Infrastructure & automation (Terraform with remote state)
+Overview
+
+    Goal: Provision a small but realistic Azure environment with:
+
+        VNet, subnets, NSGs
+
+        VM (Linux), NIC, Public IP
+
+        Storage account (for app + remote Terraform state)
+
+    Style: Modular Terraform, environment‑based (dev, prod), remote state in Azure Storage.
+
+Architecture
+
+    Resource group: rg-core-dev
+
+    Network:
+
+        VNet: vnet-core-dev (10.0.0.0/16)
+
+        Subnets: subnet-web (10.0.1.0/24), subnet-management (10.0.2.0/24)
+
+    Security:
+
+        NSG for subnet-web (allow HTTP/HTTPS, SSH from your IP)
+
+        NSG for subnet-management (SSH/RDP from your IP only)
+
+    Compute:
+
+        vm-web-01 (Ubuntu), in subnet-web
+
+        Public IP + NIC, SSH key auth
+
+    Storage:
+
+        stcoredev001 for app data (blob)
+
+        Separate sttfstate001 + container tfstate for remote state

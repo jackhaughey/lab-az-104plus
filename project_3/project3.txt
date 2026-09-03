@@ -1,0 +1,10 @@
+Project 3: CI/CD pipeline (GitHub Actions or Azure DevOps)
+Overview
+
+    Goal: Automate Terraform validation and deployment with:
+
+        PR validation (fmt, validate, plan)
+
+        Manual approval before apply
+
+        Branch protection on main
